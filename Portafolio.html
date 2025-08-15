@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Winston Zuñiga – Portafolio</title>
+  <meta name="description" content="Portafolio de Winston Zuñiga, programador y creador de sitios web en WordPress. Proyectos, experiencia y contacto." />
+  <meta property="og:title" content="Winston Zuñiga – Portafolio" />
+  <meta property="og:description" content="Programación, desarrollo web y soporte TI. Revisa mis proyectos y experiencia." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0e14; /* oscuro elegante */
+      --panel:#11151d;
+      --muted:#7a8599;
+      --brand:#0ea5e9; /* azul cítrico */
+      --brand-2:#22d3ee; /* cian vivo */
+      --text:#e6e8ee;
+      --ok:#10b981;
+      --chip:#1a2030;
+      --ring:rgba(34,211,238,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;background:radial-gradient(1600px 800px at 80% -10%, rgba(34,211,238,.08), transparent 60%), radial-gradient(1000px 600px at -10% 10%, rgba(14,165,233,.10), transparent 60%), var(--bg); color:var(--text);}
+    a{color:var(--brand)}
+    .container{max-width:1100px;margin-inline:auto;padding:24px}
+    header{position:sticky;top:0;backdrop-filter:saturate(140%) blur(8px);background:linear-gradient(to bottom, rgba(11,14,20,.9), rgba(11,14,20,.5));border-bottom:1px solid rgba(255,255,255,.06);z-index:10}
+    nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .logo{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.4px}
+    .logo .dot{width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--brand-2));box-shadow:0 0 24px var(--ring)}
+    .navlinks{display:flex;gap:18px}
+    .navlinks a{text-decoration:none;color:#b9c2d0;font-weight:600;font-size:.95rem;padding:10px 12px;border-radius:10px}
+    .navlinks a:hover{color:var(--text);background:rgba(255,255,255,.04)}
+
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding:48px 0}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:24px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+    .badge{display:inline-flex;align-items:center;gap:8px;background:var(--chip);border:1px solid rgba(255,255,255,.08);color:#cfe8ff;padding:6px 10px;border-radius:999px;font-size:.8rem}
+    h1{font-size:clamp(28px,5vw,44px);line-height:1.1;margin:10px 0 14px}
+    .muted{color:var(--muted)}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+    .btn{--bgc:linear-gradient(135deg,var(--brand),var(--brand-2));display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;border-radius:12px;padding:12px 16px;border:1px solid rgba(255,255,255,.08);transition:transform .1s ease, box-shadow .15s ease}
+    .btn.primary{background:var(--bgc);color:#001018;box-shadow:0 8px 28px var(--ring)}
+    .btn.ghost{background:#0e131b}
+    .btn:hover{transform:translateY(-1px)}
+
+    .grid{display:grid;gap:18px}
+    .grid.projects{grid-template-columns:repeat(12, 1fr)}
+    .project{grid-column:span 12;background:linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:10px}
+    .project h3{margin:6px 0}
+    .chips{display:flex;flex-wrap:wrap;gap:8px}
+    .chip{background:var(--chip);border:1px solid rgba(255,255,255,.08);padding:6px 10px;border-radius:999px;font-size:.8rem;color:#cfd8ea}
+
+    .twocol{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .timeline{display:grid;gap:14px}
+    .item{background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:14px}
+    .item h4{margin:4px 0}
+    .item small{color:#9fb3c8}
+
+    footer{margin:40px 0 20px;color:#98a6ba;text-align:center}
+
+    /* Responsivo */
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr}
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Winston Zuñiga",
+    "email": "mailto:WINSTON_ZUNIGA@OUTLOOK.COM",
+    "jobTitle": "Programador / Desarrollador Web",
+    "url": "",
+    "sameAs": ["https://github.com/Minormetal"]
+  }
+  </script>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo"><span class="dot"></span> <span>Winston Zuñiga</span></div>
+      <div class="navlinks">
+        <a href="#proyectos">Proyectos</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#educacion">Educación</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="card">
+      <span class="badge">Disponibilidad: <strong style="color:var(--ok);margin-left:6px">Abierta</strong></span>
+      <h1>Programador orientado a resultados<br/> Desarrollo web y soporte TI</h1>
+      <p class="muted">Aprendiz rápido, centrado y con buen manejo del tiempo. Experiencia creando sitios en WordPress y apoyo en informática. Busco sumar valor en proyectos de desarrollo y automatización.</p>
+      <div class="actions">
+        <a class="btn primary" href="#contacto">Contactar</a>
+        <a class="btn ghost" href="https://github.com/Minormetal" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="btn ghost" href="https://drive.google.com/drive/folders/1NOtRyeLvKJavhpWe2SnbdqN8cn8lSBe7?usp=drive_link" target="_blank" rel="noreferrer">Descargar CV (PDF)</a>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Habilidades principales</h3>
+      <div class="chips" aria-label="habilidades">
+        <span class="chip">HTML</span>
+        <span class="chip">CSS</span>
+        <span class="chip">JavaScript</span>
+        <span class="chip">WordPress</span>
+        <span class="chip">Git / GitHub</span>
+        <span class="chip">Soporte TI</span>
+        <span class="chip">Ofimática avanzada</span>
+        <span class="chip">Trabajo en equipo</span>
+        <span class="chip">Gestión del tiempo</span>
+        <span class="chip">Inglés B1 (intermedio)</span>
+        <span class="chip">Español nativo</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proyectos -->
+  <section id="proyectos">
+    <h2>Proyectos</h2>
+    <div class="grid projects">
+      <article class="project">
+        <small class="muted">2024 – Actualidad</small>
+        <h3>Mechindustries – Sitio corporativo</h3>
+        <p>Sitio web en <strong>WordPress</strong> para empresa de soluciones industriales: catálogo de productos, página de contacto y estructura orientada a conversiones. Rol: <em>creador del sitio</em>.</p>
+        <div class="chips">
+          <span class="chip">WordPress</span>
+          <span class="chip">Diseño UI</span>
+          <span class="chip">SEO básico</span>
+        </div>
+        <div class="actions" style="margin-top:6px">
+          <a class="btn" href="https://mechindustries.cl/" target="_blank" rel="noreferrer">Ver proyecto</a>
+        </div>
+      </article>
+
+      <article class="project">
+        <small class="muted">2023</small>
+        <h3>Viaje Fácil – Backend (colaborador)</h3>
+        <p>Participación por 3 meses como <strong>ayudante de programador backend</strong> en una plataforma de viajes. Tareas: soporte a endpoints, pruebas y corrección de errores.</p>
+        <div class="chips">
+          <span class="chip">API</span>
+          <span class="chip">Colaboración</span>
+          <span class="chip">Pruebas</span>
+        </div>
+      </article>
+
+      <article class="project">
+        <small class="muted">2025</small>
+        <h3>Automatizaciones pequeñas</h3>
+        <p>Scripts y tareas para simplificar flujos (por ejemplo, limpieza de datos y respaldos). Repositorios en GitHub bajo el usuario <strong>Minormetal</strong>.</p>
+        <div class="chips">
+          <span class="chip">Scripting</span>
+          <span class="chip">Automatización</span>
+        </div>
+        <div class="actions" style="margin-top:6px">
+          <a class="btn" href="https://github.com/Minormetal" target="_blank" rel="noreferrer">Ver GitHub</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Experiencia y Educación -->
+  <section id="experiencia" class="twocol" style="margin-top:24px">
+    <div>
+      <h2>Experiencia</h2>
+      <div class="timeline">
+        <div class="item">
+          <h4>Municipalidad de Illapel – Práctica (TI)</h4>
+          <small>Mar–Jun 2025 · Illapel</small>
+          <p class="muted">Apoyo como junior en el sector de informática: arreglos de cámaras e informática básica.</p>
+        </div>
+        <div class="item">
+          <h4>Proyecto Viaje Fácil – Ayudante backend</h4>
+          <small>2023</small>
+          <p class="muted">Soporte a desarrollo backend y pruebas por un periodo de 3 meses.</p>
+        </div>
+        <div class="item">
+          <h4>Mechindustries – Creador de sitio WordPress</h4>
+          <small>2024 – Actualidad</small>
+          <p class="muted">Diseño, configuración de páginas y estructura de navegación.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="educacion">
+      <h2>Educación</h2>
+      <div class="timeline">
+        <div class="item">
+          <h4>Analista de Sistemas (Titulado)</h4>
+          <small>Instituto Profesional Providencia</small>
+        </div>
+        <div class="item">
+          <h4>Otros</h4>
+          <p class="muted">Ofimática avanzada · Inglés B1 (intermedio) · Español nativo · WordPress</p>
+        </div>
+      </div>
+
+      <h2 style="margin-top:20px">Competencias</h2>
+      <div class="chips">
+        <span class="chip">Aprendiz rápido</span>
+        <span class="chip">Centrado</span>
+        <span class="chip">Trabajo en equipo</span>
+        <span class="chip">Manejo del tiempo</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" style="margin-top:24px">
+    <h2>Contacto</h2>
+    <div class="card">
+      <p>¿Te interesa trabajar conmigo o tienes un proyecto en mente? Contactame</p>
+      <div class="chips">
+        <a class="btn" href="https://outlook.live.com/mail/deeplink/compose?to=winston_zuniga@outlook.com" target="_blank" rel="noreferrer">Enviar correo</a>
+        <a class="btn" href="https://wa.me/56975317049" target="_blank" rel="noreferrer">WhatsApp</a>
+        <a class="btn ghost" href="https://github.com/Minormetal" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">© <span id="y"></span> Winston Zuñiga · Hecho con HTML y mucho esfuerzo</div>
+</footer>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
